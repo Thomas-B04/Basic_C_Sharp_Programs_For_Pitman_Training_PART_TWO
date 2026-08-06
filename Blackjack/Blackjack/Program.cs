@@ -8,7 +8,7 @@
 
             Deck deck = new Deck();
             int shuffleCount;
-            deck = DeckHelper.Shuffle(deck, out shuffleCount, times: 5);
+            deck = Deck.Shuffle(deck, out shuffleCount, 3);
 
             Console.WriteLine($"Deck has {deck.Cards.Count} cards. And those cards are:");
             foreach (var card in deck.Cards)
