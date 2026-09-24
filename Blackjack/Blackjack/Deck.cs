@@ -4,9 +4,9 @@
     {
         public Deck() // Constructor for the Deck class
         {
-            Cards = new List<Card>(); // Initialize the Cards property as an empty list
-            List<string> Suits = new List<string> { "Hearts", "Diamonds", "Clubs", "Spades" };
-            List<string> Ranks = new List<string> { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
+            Cards = []; // Initialize the Cards property as an empty list
+            List<string> Suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
+            List<string> Ranks = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"];
 
             foreach (string suit in Suits) // Loop through each suit
             {
@@ -23,8 +23,8 @@
             for (int i = 0; i < times; i++) // Loop for the specified number of shuffles
             {
                 shuffleCount++;
-                List<Card> TempList = new List<Card>();
-                Random random = new Random();
+                List<Card> TempList = [];
+                Random random = new();
 
                 while (deck.Cards.Count > 0)
                 {

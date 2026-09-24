@@ -4,20 +4,23 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Blackjack!");
+            TwentyOneGame game = new()
+            {
+                Players = ["John", "Jane"]
+            };
 
-            Deck deck = new Deck();
-            int shuffleCount;
-            deck = Deck.Shuffle(deck, out shuffleCount, 3);
+            game.ListPlayers();
 
-            Console.WriteLine($"Deck has {deck.Cards.Count} cards. And those cards are:");
+            // Deck setup and shuffling
+            Deck deck = new();
+            deck = Deck.Shuffle(deck, out int shuffleCount, 3);
+
             foreach (var card in deck.Cards)
             {
                 Console.WriteLine($"{card.Rank} of {card.Suit}");
             }
-            Console.WriteLine(deck.Cards.Count == 52 ? "COMEPLETION: Deck is complete." : "WARNING: Deck is incomplete.");
-            Console.WriteLine($"There are {deck.Cards.Count} cards in the deck.");
+
             Console.WriteLine($"The deck was shuffled: {shuffleCount} times.");
         }
-    }   
+    }
 }
