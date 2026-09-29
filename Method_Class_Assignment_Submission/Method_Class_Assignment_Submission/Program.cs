@@ -5,7 +5,7 @@
         static void Main()
         {
             // Create an instance of the MathOperations class.
-            MathOperations math = new MathOperations();
+            MathOperations math = new();
 
             // Call MathOps with positional arguments: first argument maps to num1, second to num2.
             math.MathOps(10, 50);

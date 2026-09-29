@@ -14,33 +14,29 @@ class Program
         Console.WriteLine("Choose part to run (1, 2, 3, 4, 5, or 6):");
         string choice = Console.ReadLine() ?? "";
 
-        if (choice == "1")
+        switch (choice)
         {
-            RunPartOne();
-        }
-        else if (choice == "2")
-        {
-            RunPartTwo();
-        }
-        else if (choice == "3")
-        {
-            RunPartThree();
-        }
-        else if (choice == "4")
-        {
-            RunPartFour();
-        }
-        else if (choice == "5")
-        {
-            RunPartFive();
-        }
-        else if (choice == "6")
-        {
-            RunPartSix();
-        }
-        else
-        {
-            Console.WriteLine("Invalid choice.");
+            case "1":
+                RunPartOne();
+                break;
+            case "2":
+                RunPartTwo();
+                break;
+            case "3":
+                RunPartThree();
+                break;
+            case "4":
+                RunPartFour();
+                break;
+            case "5":
+                RunPartFive();
+                break;
+            case "6":
+                RunPartSix();
+                break;
+            default:
+                Console.WriteLine("Invalid choice.");
+                break;
         }
     }
 

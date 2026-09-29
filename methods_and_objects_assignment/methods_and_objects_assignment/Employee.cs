@@ -3,5 +3,10 @@
     internal class Employee : Person
     {
         public int Id { get; set; }
+
+        public void SayID()
+        {
+            Console.WriteLine($"ID: {Id}");
+        }
     }
 }

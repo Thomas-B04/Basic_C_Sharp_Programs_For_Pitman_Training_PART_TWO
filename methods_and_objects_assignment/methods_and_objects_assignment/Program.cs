@@ -11,6 +11,6 @@ class Program
             Id = 1
         };
         employee.SayName();
-        Console.WriteLine(employee.Id);
+        employee.SayID();
     }
 }
