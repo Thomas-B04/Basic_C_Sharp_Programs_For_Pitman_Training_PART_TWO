@@ -4,11 +4,15 @@
     {
         static void Main(string[] args)
         {
-            TwentyOneGame game = new()
+            Game game = new TwentyOneGame
             {
-                Players = ["John", "Jane"]
+                Players = [] // Initialize the Players list
             };
+            Player player = new() { Name = "John Doe" };// Create a new player
+            game += player; // Add player to the game using overloaded + operator
+            game -= player; // Remove player from the game using overloaded - operator
 
+            // List players in the game
             game.ListPlayers();
 
             // Deck setup and shuffling
