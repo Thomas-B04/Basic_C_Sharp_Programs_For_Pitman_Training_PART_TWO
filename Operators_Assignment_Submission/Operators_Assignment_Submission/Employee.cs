@@ -6,19 +6,24 @@
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        
-        public static bool operator ==(Employee emp1, Employee emp2) // Overload the equality operator to compare Employee objects based on their Id property
+        // Overload the equality operator to compare Employee objects based on their Id property
+        public static bool operator ==(Employee emp1, Employee emp2) 
         {
-            if (ReferenceEquals(emp1, emp2)) // Check if both references point to the same object
+            // Check if both references point to the same object
+            if (ReferenceEquals(emp1, emp2)) 
                 return true;
-            if (emp1 is null || emp2 is null) // Check if either of the Employee objects is null
+            // Check if either of the Employee objects is null
+            if (emp1 is null || emp2 is null) 
                 return false;
-            return emp1.Id == emp2.Id; // Compare the Id properties of both Employee objects
+            // Compare the Id properties of both Employee objects
+            return emp1.Id == emp2.Id; 
         }
 
-        public static bool operator !=(Employee emp1, Employee emp2) // Overload the inequality operator to compare Employee objects based on their Id property
+        // Overload the inequality operator to compare Employee objects based on their Id property
+        public static bool operator !=(Employee emp1, Employee emp2) 
         {
-            return !(emp1 == emp2); // Use the overloaded equality operator to determine inequality
+            // Use the overloaded equality operator to determine inequality
+            return !(emp1 == emp2); 
         }
 
     }
