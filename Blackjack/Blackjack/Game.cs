@@ -11,7 +11,7 @@
         {
             foreach (Player player in Players)
             {
-                Console.WriteLine(player.Name); // Print the player's name
+                Console.WriteLine(player.Name); // Print the player's name 
             }
         }
     }

@@ -2,13 +2,36 @@
 {
     public class Card
     {
-        public string Suit { get; private set; }
-        public string Rank { get; private set; }
+        public SuitType Suit { get; private set; }
+        public RankType Rank { get; private set; }
 
-        public Card(string suit, string rank)
+        public Card(SuitType suit, RankType rank)
         {
             Suit = suit;
             Rank = rank;
+        }
+        public enum SuitType
+        {
+            Hearts,
+            Diamonds,
+            Clubs,
+            Spades
+        }
+        public enum RankType
+        {
+            Ace,
+            Two,
+            Three,
+            Four,
+            Five,
+            Six,
+            Seven,
+            Eight,
+            Nine,
+            Ten,
+            Jack,
+            Queen,
+            King
         }
     }
 }

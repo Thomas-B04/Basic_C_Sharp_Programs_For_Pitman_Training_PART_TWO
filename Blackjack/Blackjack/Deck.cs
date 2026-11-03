@@ -5,14 +5,12 @@
         public Deck() // Constructor for the Deck class
         {
             Cards = []; // Initialize the Cards property as an empty list
-            List<string> Suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
-            List<string> Ranks = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"];
 
-            foreach (string suit in Suits) // Loop through each suit
+            for (int i = 0; i < 4; i++)// Loop through the four suits
             {
-                foreach (string rank in Ranks) // Loop through each rank for the current suit
+                for (int j = 0; j < 13; j++) //Loop through the thirteen ranks
                 {
-                    Card card = new(suit, rank); // Create a new card with the current suit and rank
+                    Card card = new((Card.SuitType)i, (Card.RankType)j); // Create a new card with the current suit and rank
                     Cards.Add(card); // Add the card to the deck
                 }
             }
