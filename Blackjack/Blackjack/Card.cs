@@ -1,15 +1,11 @@
 ﻿namespace Blackjack
 {
-    public class Card
+    public struct Card(Card.SuitType suit, Card.RankType rank)
     {
         public SuitType Suit { get; private set; }
         public RankType Rank { get; private set; }
 
-        public Card(SuitType suit, RankType rank)
-        {
-            Suit = suit;
-            Rank = rank;
-        }
+
         public enum SuitType
         {
             Hearts,
